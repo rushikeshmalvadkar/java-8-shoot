@@ -28,7 +28,7 @@ class ProblemThreeTest {
 		List<Integer> numbers = Arrays.asList(2,4,5,6);
 		ProblemThree problemThree = new ProblemThree();
 		Integer expected=6;
-		assertEquals(expected, problemThree.getMaxValue(numberss));
+		assertEquals(expected, problemThree.getMaxValue(numbers));
 	}
 	@Test
 	void getMaxValueTest4() {
