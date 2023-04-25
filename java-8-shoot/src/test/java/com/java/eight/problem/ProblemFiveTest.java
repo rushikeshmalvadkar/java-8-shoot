@@ -34,7 +34,4 @@ class ProblemFiveTest {
 		List<String> expected = Arrays.asList();
        assertThrows(IllegalArgumentException.class, ()->problemFive.getNamesWithStartR(null));		
 	}
-	
-	
-
 }
