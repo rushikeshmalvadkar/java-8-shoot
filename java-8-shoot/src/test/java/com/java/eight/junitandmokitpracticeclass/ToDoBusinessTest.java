@@ -32,6 +32,7 @@ class ToDoBusinessTest {
 		ToDoBusiness toDoBusiness = new ToDoBusiness(toDoServiceMock);
 		List<String> todosforSpring = toDoBusiness.getTodosforSpring("rushikesh");
 		assertEquals("Spring", todosforSpring.get(0));
+		assertEquals(1, todosforSpring.size());
 	}
 	
 
