@@ -35,5 +35,19 @@ class ToDoBusinessTest {
 		assertEquals(1, todosforSpring.size());
 	}
 	
+	@Test
+	void getTodosforSpringTestIfUserIsNull() {
+		ToDoService toDoServiceMock = Mockito.mock(ToDoService.class);
+		
+		List<String> todos = Arrays.asList("Spring","eat");
+		Mockito.when(toDoServiceMock.getTodos(null)).thenThrow(NullPointerException.class);
+		
+		ToDoBusiness toDoBusiness = new ToDoBusiness(toDoServiceMock);
+		
+		
+          NullPointerException exception = assertThrows(NullPointerException.class,()->toDoBusiness.getTodosforSpring(null));
+          assertEquals("user should not be null", exception.getMessage());
+	}
+	
 
 }

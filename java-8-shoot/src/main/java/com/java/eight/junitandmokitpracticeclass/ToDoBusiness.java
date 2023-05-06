@@ -11,7 +11,9 @@ public class ToDoBusiness {
 	    }  
 	      
 	    public List<String> getTodosforSpring(String user) {  
-	          
+	        if(user==null) {
+	        	throw new NullPointerException("user should not be null");
+	        }
 	        List<String> retrievedtodos = new ArrayList<String>();  
 	        List<String> todos = doService.getTodos(user);  
 	          
